@@ -14,10 +14,11 @@ const config: Config = {
   // Set the production url of your site here
   // For GitHub Pages: https://<username>.github.io
   url: 'https://shootingstar.github.io',
-  // // For GitHub Pages: /<repository-name>/
-  // // baseUrl: '/internal-lib-sharing-with-gitlab/',
-  // For vercel
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  // // For GitHub Pages: /<repository-name>/
+  // baseUrl: '/internal-lib-sharing-with-gitlab/',
 
   // GitHub Pages deployment config
   organizationName: 'shootingstar', // Your GitHub username or org
