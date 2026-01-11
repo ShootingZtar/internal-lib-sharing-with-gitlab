@@ -11,11 +11,16 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://your-docusaurus-site.example.com',
-  baseUrl: '/',
+  // Set the production url of your site here
+  // For GitHub Pages: https://<username>.github.io
+  url: 'https://shootingstar.github.io',
+  // For GitHub Pages: /<repository-name>/
+  baseUrl: '/internal-lib-sharing-with-gitlab/',
 
-  organizationName: 'your-org',
-  projectName: 'vue-lib-gitlab-course',
+  // GitHub Pages deployment config
+  organizationName: 'shootingstar', // Your GitHub username or org
+  projectName: 'internal-lib-sharing-with-gitlab', // Your repo name
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
