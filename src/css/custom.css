@@ -1,0 +1,308 @@
+/**
+ * Vue + GitLab Registry Course - Custom Styles
+ * A modern, Vue-inspired color scheme
+ */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Vue-inspired color palette */
+  --ifm-color-primary: #42b883;
+  --ifm-color-primary-dark: #3aa876;
+  --ifm-color-primary-darker: #379f6f;
+  --ifm-color-primary-darkest: #2d835b;
+  --ifm-color-primary-light: #55c08f;
+  --ifm-color-primary-lighter: #62c698;
+  --ifm-color-primary-lightest: #7ed1ab;
+
+  /* Secondary - Vue dark blue */
+  --ifm-color-secondary: #35495e;
+  
+  /* Typography */
+  --ifm-font-family-base: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
+  --ifm-heading-font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  
+  /* Code blocks */
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(66, 184, 131, 0.15);
+  
+  /* Spacing */
+  --ifm-spacing-horizontal: 1.5rem;
+  --doc-sidebar-width: 280px;
+  
+  /* Shadows */
+  --ifm-global-shadow-lw: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --ifm-global-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --ifm-global-shadow-tl: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Dark mode */
+[data-theme='dark'] {
+  --ifm-color-primary: #42b883;
+  --ifm-color-primary-dark: #3aa876;
+  --ifm-color-primary-darker: #379f6f;
+  --ifm-color-primary-darkest: #2d835b;
+  --ifm-color-primary-light: #55c08f;
+  --ifm-color-primary-lighter: #62c698;
+  --ifm-color-primary-lightest: #7ed1ab;
+  
+  --ifm-background-color: #1a1a2e;
+  --ifm-background-surface-color: #16213e;
+  --ifm-navbar-background-color: #0f0f1a;
+  --ifm-footer-background-color: #0a0a14;
+  
+  --docusaurus-highlighted-code-line-bg: rgba(66, 184, 131, 0.2);
+}
+
+/* Navbar styling */
+.navbar {
+  box-shadow: var(--ifm-global-shadow-lw);
+  backdrop-filter: blur(8px);
+}
+
+.navbar__title {
+  font-weight: 700;
+}
+
+.navbar__link {
+  font-weight: 500;
+}
+
+/* Sidebar */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--ifm-toc-border-color);
+}
+
+.menu__link {
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease;
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+.menu__list-item-collapsible:hover {
+  background: transparent;
+}
+
+/* Category icons in sidebar */
+.menu__link--sublist::after {
+  background-size: 1.25rem;
+}
+
+/* Content area */
+.markdown {
+  --ifm-heading-font-weight: 700;
+}
+
+.markdown h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.markdown h3 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+}
+
+/* Code blocks */
+.theme-code-block {
+  border-radius: 0.75rem !important;
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.prism-code {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Inline code */
+code {
+  border-radius: 0.375rem;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.9em;
+  background: var(--ifm-color-emphasis-200);
+}
+
+/* Admonitions */
+.admonition {
+  border-radius: 0.75rem;
+  border-left-width: 4px;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.admonition-heading h5 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+/* Tip admonition */
+.admonition-tip {
+  --ifm-alert-background-color: rgba(66, 184, 131, 0.1);
+  --ifm-alert-border-color: #42b883;
+}
+
+/* Caution/Warning */
+.admonition-caution,
+.admonition-warning {
+  --ifm-alert-background-color: rgba(245, 158, 11, 0.1);
+  --ifm-alert-border-color: #f59e0b;
+}
+
+/* Danger */
+.admonition-danger {
+  --ifm-alert-background-color: rgba(239, 68, 68, 0.1);
+  --ifm-alert-border-color: #ef4444;
+}
+
+/* Info */
+.admonition-info {
+  --ifm-alert-background-color: rgba(59, 130, 246, 0.1);
+  --ifm-alert-border-color: #3b82f6;
+}
+
+/* Tables */
+table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th {
+  background: var(--ifm-color-emphasis-100);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+}
+
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+tr:hover td {
+  background: var(--ifm-color-emphasis-100);
+}
+
+/* TOC */
+.table-of-contents {
+  font-size: 0.9rem;
+}
+
+.table-of-contents__link {
+  border-radius: 0.25rem;
+}
+
+.table-of-contents__link--active {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+/* Pagination */
+.pagination-nav__link {
+  border-radius: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.2s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.pagination-nav__label {
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer__link-item {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.footer__link-item:hover {
+  opacity: 1;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-emphasis-400);
+}
+
+/* Selection */
+::selection {
+  background: rgba(66, 184, 131, 0.3);
+}
+
+/* Breadcrumbs */
+.breadcrumbs__link {
+  font-size: 0.9rem;
+}
+
+/* Doc card / Link cards */
+.card {
+  border-radius: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+/* Tab styling */
+.tabs__item {
+  font-weight: 500;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.tabs__item--active {
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+/* Search */
+.DocSearch-Button {
+  border-radius: 0.5rem !important;
+}
