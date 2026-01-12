@@ -16,9 +16,8 @@ const config: Config = {
   url: 'https://shootingstar.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-  // // For GitHub Pages: /<repository-name>/
-  // baseUrl: '/internal-lib-sharing-with-gitlab/',
+  // baseUrl: '/', // For vercel
+  baseUrl: '/internal-lib-sharing-with-gitlab/', // For GitHub Pages
 
   // GitHub Pages deployment config
   organizationName: 'shootingstar', // Your GitHub username or org
